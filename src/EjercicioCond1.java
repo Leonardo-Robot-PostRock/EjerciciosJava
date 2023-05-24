@@ -15,10 +15,10 @@ public class EjercicioCond1 {
 
         if (numero1 > numero2) {
             resultado = numero1 - numero2;
-            JOptionPane.showMessageDialog(null, "El resultado de restar " + numero1 + "con " + numero2 + " es " + resultado);
+            JOptionPane.showMessageDialog(null, "El resultado de restar " + numero1 + " con " + numero2 + " es " + resultado);
         } else {
             resultado = numero2 - numero1;
-            JOptionPane.showMessageDialog(null, "El resultado de restar " + numero2 + "con " + numero1 + " es " + resultado);
+            JOptionPane.showMessageDialog(null, "El resultado de restar " + numero2 + " con " + numero1 + " es " + resultado);
         }
     }
 }
