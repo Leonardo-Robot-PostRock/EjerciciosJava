@@ -14,6 +14,6 @@ public class ejerciciosCiclos {
             System.out.println("El número actual es " + i);
             resultado = resultado + i;
         }
-
+        System.out.println("La suma total de los números es: "+ resultado);
     }
 }
