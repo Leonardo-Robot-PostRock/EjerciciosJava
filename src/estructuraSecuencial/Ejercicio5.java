@@ -1,4 +1,4 @@
-package secuencialYcondicionales;
+package estructuraSecuencial;
 
 import javax.swing.*;
 

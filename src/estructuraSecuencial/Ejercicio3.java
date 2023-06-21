@@ -1,7 +1,6 @@
-package secuencialYcondicionales;
+package estructuraSecuencial;
 
 import javax.swing.*;
-import java.sql.SQLOutput;
 
 public class Ejercicio3 {
     public static void main(String[] args) {
