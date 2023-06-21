@@ -12,21 +12,28 @@ public class Ejercicio9 {
 
         String diaLowerCase = dia.toLowerCase();
 
-        switch (diaLowerCase){
+        switch (diaLowerCase) {
             case "lunes":
                 System.out.println("Laboral");
+                break;
             case "martes":
                 System.out.println("Laboral");
+                break;
             case "miércoles":
                 System.out.println("Laboral");
+                break;
+            case "miercoles":
+                System.out.println("Laboral");
+                break;
             case "jueves":
                 System.out.println("Laboral");
+                break;
             case "viernes":
                 System.out.println("Laboral");
-            case "sábado":
-                System.out.println("Laboral");
-            case "domingo":
-                System.out.println("Laboral");
+                break;
+            default:
+                System.out.println("No es laboral");
+                break;
         }
     }
 }
