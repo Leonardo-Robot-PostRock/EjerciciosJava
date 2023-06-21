@@ -11,9 +11,6 @@ public class Ejercicio5 {
         int max = 6;
         int min = 1;
         int range = max - min + 1;
-
-        System.out.println(range);
-
         //Se puede mejorar con cálculo de probabilidades
         dado1 = (int) (Math.random() * range) + min;
         dado2 = (int) (Math.random() * range) + min;
