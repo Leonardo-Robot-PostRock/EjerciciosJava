@@ -5,6 +5,8 @@ import java.sql.SQLOutput;
 
 public class Ejercicio3 {
     public static void main(String[] args) {
+//        Escriba un programa en PSeInt que calcule las raíces de una ecuación, usando la ecuación de segundo grado.
+
         double a, b, c;
         double discriminante;
         double raiz1;

@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class Ejercicio2 {
     public static void main(String[] args) {
+//        Escriba un programa PSeInt que acepte el número de identificación de un empleado, el salario por hora del empleado y el total de horas trabajadas en un mes. Imprima la identificación y el salario del empleado de un mes en particular.
+
         int identificacion;
         double salarioXhora;
         double horas;

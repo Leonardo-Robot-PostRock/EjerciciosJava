@@ -3,7 +3,8 @@ package secuencialYcondicionales;
 import javax.swing.*;
 
 public class Ejercicio4 {
-    public static void main(String []args){
+    public static void main(String[] args) {
+//        Escriba un programa en PSeInt para convertir una cadena a un número entero.
         String enTexto;
         int enEntero;
 

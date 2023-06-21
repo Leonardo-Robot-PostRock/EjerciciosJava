@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class Ejercicio1 {
     public static void main(String[] args) {
+//        Escriba un programa en PSeInt para convertir segundos a minutos, minutos a horas y horas a días.
+
         int seg = 0;
         int minutos = 0;
         int horas = 0;
