@@ -12,8 +12,6 @@ public class Ejercicio9 {
 
         String diaLowerCase = dia.toLowerCase();
 
-        System.out.println(diaLowerCase);
-
         switch (diaLowerCase){
             case "lunes":
                 System.out.println("Laboral");
