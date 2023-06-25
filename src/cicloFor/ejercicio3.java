@@ -1,4 +1,4 @@
-package ciclosRepetitivos;
+package cicloFor;
 
 import javax.swing.*;
 

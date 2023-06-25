@@ -1,7 +1,6 @@
-package ciclosRepetitivos;
+package cicloFor;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class ejercicio8 {
     public static void main(String[] args) {
