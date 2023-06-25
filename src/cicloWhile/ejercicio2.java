@@ -23,6 +23,5 @@ public class ejercicio2 {
         }
     }
 
-    //La diferencia entre un código y el otro es la experiencia que ofrece al usuario.
-    // Con el segundo código el usuario dejaría de entender qué esta sucediendo en el programa una vez ingresado el monto a retirar
+    //La diferencia entre un código y el otro es que el primero esta bien escrito, no tiene un blucle infinito como el segundo código.
 }
