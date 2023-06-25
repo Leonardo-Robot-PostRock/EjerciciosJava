@@ -8,7 +8,8 @@ public class ejercicio2 {
 
         for (int i = 60; i <= 100; i += 5) {
             System.out.println("El número es: " + i);
-            resultado += + i;
+            resultado += i;
+            System.out.println(resultado);
         }
         System.out.println("La suma total de los números es: " + resultado);
     }
