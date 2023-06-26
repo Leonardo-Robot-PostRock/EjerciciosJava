@@ -1,9 +1,8 @@
-package cicloWhile;
+package cicloDoWhile;
 
-import javax.naming.InsufficientResourcesException;
 import javax.swing.*;
 
-public class ejercicio7 {
+public class ejercicio1 {
     public static void main(String[] args) {
 //        1) Haciendo uso de un ciclo repetir, crear un algoritmo que:
 //⚫ Pida al usuario ingresar una serie de números positivos y acumularlos en una variable llamada “dividendo” hasta que se ingrese el número 0.
@@ -15,7 +14,6 @@ public class ejercicio7 {
         divisor = 0;
         dividendo = 0;
         int entrada;
-
         do {
             entrada = Integer.parseInt(JOptionPane.showInputDialog(null, "Ingrese el número positivo. Si desea saber el promedio de los números ingresados, ingrese 0"));
 
