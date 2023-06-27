@@ -1,11 +1,13 @@
 package practica;
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class factorial {
     public static void main(String[] args) {
-        int num;
-        int fact;
+
+        double num;
+        double fact;
         fact = 1;
 
         System.out.println("Ingrese número a sacar factorial");
@@ -13,15 +15,15 @@ public class factorial {
 
         num = scanner.nextInt();
 
-        System.out.print(num + "!" + " = ");
-        for (int i = num; i >= 1; i--) {
+        System.out.print((int) num + "!" + " = ");
+        for (double i = num; i >= 1; i--) {
             fact *= i;
             if (i != 1) {
-                System.out.print(i + "*");
+                System.out.print((int) i + "*");
             } else {
-                System.out.print(i);
+                System.out.print((int) i);
             }
         }
-        System.out.println(" = " + fact);
+        System.out.println(" = " + (int) fact);
     }
 }
