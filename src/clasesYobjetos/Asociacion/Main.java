@@ -1,4 +1,4 @@
-package clasesYobjetos;
+package clasesYobjetos.Asociacion;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,5 +22,8 @@ public class Main {
 
         System.out.println(per1.getNombre() + " " + per1.getApellido() + " vive en " + per1.getDomicilio().getCalle() + " " + per1.getDomicilio().getNumero());
 
+        //La NAVEGABILIDAD LA REALIZAMOS DE LA SIGUIENTE FORMA
+        //per.getDomicilio() esto significa que puedo llegar a la variable referenciada y una vez ahí con
+        //per1.getDomicilio().getCalle() obtengo la calle de la variable per1
     }
 }
