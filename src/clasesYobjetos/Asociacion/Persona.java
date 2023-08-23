@@ -1,4 +1,6 @@
-package clasesYobjetos;
+package clasesYobjetos.Asociacion;
+
+import clasesYobjetos.Asociacion.Domicilio;
 
 public class Persona {
     //declaración de los atributos
@@ -44,6 +46,5 @@ public class Persona {
     public void setNombre(String val) {
         this.nombre = val;
     }
-
 
 }
