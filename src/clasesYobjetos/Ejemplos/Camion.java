@@ -9,8 +9,10 @@ public class Camion {
 
     /* Métodos o comportamientos*/
 
-//    public Camion() {
-//    }
+    /* Constructores */
+    public Camion() {
+        this.marca = "";
+    }
 
     public Camion(String marca, double carga, String propietario) {
         this.marca = marca;
