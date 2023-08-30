@@ -31,7 +31,9 @@ public class Camion {
     }
 
     public void setProp(String prop) {
-        this.propietario = propietario;
+        if (prop != "") {
+            this.propietario = propietario;
+        }
     }
 
     public String getPropietario() {
