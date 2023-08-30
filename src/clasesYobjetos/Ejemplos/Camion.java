@@ -1,29 +1,31 @@
 package clasesYobjetos.Ejemplos;
 
 public class Camion {
+
+    /* Atributos */
     public final String marca;
-    private int carga;
+    private double carga;
     private String propietario;
 
     /* Métodos o comportamientos*/
 
-    public Camion() {
-    }
+//    public Camion() {
+//    }
 
-    public Camion(String marca, int carga, String propietario) {
+    public Camion(String marca, double carga, String propietario) {
         this.marca = marca;
         this.carga = carga;
         this.propietario = propietario;
     }
 
-    public void setCarga(int kg) {
+    public void setCarga(double kg) {
         if (kg > 0) {
             this.carga = kg;
         }
     }
 
-    public int getCarga() {
-        return carga;
+    public double getCarga() {
+        return this.carga;
     }
 
     public void setProp(String prop) {
