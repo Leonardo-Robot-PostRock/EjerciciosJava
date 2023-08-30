@@ -1,2 +1,4 @@
-package clasesYobjetos.Composicion;public class Persona {
+package clasesYobjetos.Composicion;
+
+public class Persona {
 }

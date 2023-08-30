@@ -1,2 +1,4 @@
-package clasesYobjetos.Composicion;public class Domicilio {
+package clasesYobjetos.Composicion;
+
+public class Domicilio {
 }
