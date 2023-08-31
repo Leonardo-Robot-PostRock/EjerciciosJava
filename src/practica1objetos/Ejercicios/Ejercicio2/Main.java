@@ -4,7 +4,8 @@ public class Main {
     public static void main(String[] args) {
         Persona persona1 = new Persona("Aylen", 19, 34321323, 66, 1.60);
         Persona persona2 = new Persona("Fernando", 38, 60, 1.70);
-        Persona persona3 = new Persona("Ana", 16,  45, 1.45);
+        Persona persona3 = new Persona("Ana", 16, 45, 1.45);
+        Persona persona4 = new Persona("Marcos", 24);
 
         int resultadoIMC = persona1.calcularIMC(persona1.getPeso(), persona1.getAltura());
         int resultadoIMC2 = persona3.calcularIMC(persona3.getPeso(), persona3.getAltura());
@@ -19,7 +20,10 @@ public class Main {
         boolean esMayor2 = persona3.esMayorDeEdad();
         verificarEdad(esMayor2);
 
-
+        System.out.println("----------------");
+        persona4.setAltura(1.80);
+        persona4.setPeso(70);
+        persona4.imprimir();
 //        persona1.imprimir(); También puede usar el método
 
         System.out.println("------------------");

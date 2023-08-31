@@ -17,6 +17,9 @@ public class Persona {
     public Persona(String nombre, int edad) {
         this.nombre = nombre;
         this.edad = edad;
+        this.dni = generaDNI();
+        this.letraDNI = generaLetraDNI();
+        this.dniCompleto = generaDniCompleto();
     }
 
     public Persona(String nombre, int edad, double peso, double altura) {
@@ -72,10 +75,10 @@ public class Persona {
     }
 
     public double getAltura() {
-        return altura;
+        return this.altura;
     }
 
-    public void setAltura(int altura) {
+    public void setAltura(double altura) {
         this.altura = altura;
     }
 
