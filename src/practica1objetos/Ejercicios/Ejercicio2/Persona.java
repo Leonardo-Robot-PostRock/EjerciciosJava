@@ -7,6 +7,7 @@ public class Persona {
     private int edad;
     private char letraDNI;
     private int dni;
+    private String dniCompleto;
     private double peso;
     private double altura;
 
@@ -23,6 +24,7 @@ public class Persona {
         this.edad = edad;
         this.dni = generaDNI();
         this.letraDNI = generaLetraDNI();
+        this.dniCompleto = generaDniCompleto();
         this.peso = peso;
         this.altura = altura;
     }
@@ -31,6 +33,8 @@ public class Persona {
         this.nombre = nombre;
         this.edad = edad;
         this.dni = dni;
+        this.letraDNI = generaLetraDNI();
+        this.dniCompleto = generaDniCompleto();
         this.peso = peso;
         this.altura = altura;
     }
@@ -100,10 +104,19 @@ public class Persona {
         return letras.charAt(this.dni % 23);
     }
 
+    private String generaDniCompleto() {
+        String cadaneDni = Integer.toString(this.dni);
+        return this.letraDNI + cadaneDni;
+    }
+
+    public String getDniCompleto() {
+        return this.dniCompleto;
+    }
+
     public void imprimir() {
         System.out.println("Nombre: " + this.nombre);
         System.out.println("Edad: " + this.edad);
-        System.out.println("DNI: " + this.letraDNI + this.dni);
+        System.out.println("DNI: " + this.dniCompleto);
         System.out.println("Peso: " + this.peso);
         System.out.println("Altura: " + this.altura);
     }

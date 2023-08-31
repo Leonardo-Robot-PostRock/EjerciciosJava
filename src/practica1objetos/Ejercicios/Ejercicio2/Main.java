@@ -24,12 +24,13 @@ public class Main {
             System.out.println("No es mayor de edad");
         }
 
-        System.out.println(persona1.getDni());
+//        persona1.imprimir(); También puede usar el método
 
         System.out.println("------------------");
 
-        System.out.println(persona2.getNombre() + ":");
         persona2.imprimir();
+        System.out.println(persona2.getDni());
+        System.out.println(persona2.getDniCompleto());
 
     }
 }
