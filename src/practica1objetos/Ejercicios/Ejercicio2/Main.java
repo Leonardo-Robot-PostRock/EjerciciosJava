@@ -23,7 +23,9 @@ public class Main {
         System.out.println("----------------");
         persona4.setAltura(1.80);
         persona4.setPeso(70);
+        int resultadoIMC3 = persona4.calcularIMC(persona4.getPeso(), persona4.getAltura());
         persona4.imprimir();
+        examenIMC(resultadoIMC3);
 //        persona1.imprimir(); También puede usar el método
 
         System.out.println("------------------");
