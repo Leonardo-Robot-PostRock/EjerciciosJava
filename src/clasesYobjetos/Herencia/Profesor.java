@@ -15,4 +15,9 @@ public class Profesor extends Persona {
     public void setLegajo(int legajo) {
         this.legajo = legajo;
     }
+
+    @Override
+    public void andar() {
+
+    }
 }

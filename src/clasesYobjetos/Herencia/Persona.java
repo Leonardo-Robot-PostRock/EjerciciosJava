@@ -1,6 +1,6 @@
 package clasesYobjetos.Herencia;
 
-public class Persona {
+public abstract class Persona {
     protected String nombre;
 
     protected  String apellido;
@@ -33,4 +33,6 @@ public class Persona {
     public void setDni(long dni) {
         this.dni = dni;
     }
+
+    public abstract void andar();
 }
