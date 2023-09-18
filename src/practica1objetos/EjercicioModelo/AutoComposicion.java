@@ -127,7 +127,7 @@ public class AutoComposicion implements Imprimible {
         System.out.println("Modelo: " + this.modelo);
         System.out.println("Motor: " + motor.getTipo() + " (" + motor.getCilindrada() + " cc");
         System.out.println("Caja de Cambios: " + cajaDeCambios.getNumMarchas() + " marchas " + cajaDeCambios.getTipo());
-        System.out.println("Llantas");
+        System.out.println("Llantas: " + llantas.getMarca() + " diametro " + llantas.getDiametroPulgadas());
         System.out.println("Puertas: " + this.puertas);
         System.out.println("Asientos: " + this.asientos);
         System.out.println("Velocidad máxima: " + this.velocidadMaxima);
