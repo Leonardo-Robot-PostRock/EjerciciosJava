@@ -1,4 +1,4 @@
-package practica1objetos.Ejercicios.Ejercicio3;
+package practica1Objetos.Ejercicios.Ejercicio3;
 
 public class Serie {
     private String titulo;

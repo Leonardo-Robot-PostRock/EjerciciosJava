@@ -1,4 +1,4 @@
-package practica1objetos.Ejercicios.Ejercicio4;
+package practica1Objetos.Ejercicios.Ejercicio4;
 
 public class Videojuego {
     private String titulo;

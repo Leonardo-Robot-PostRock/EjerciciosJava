@@ -1,8 +1,11 @@
-package practica1objetos.Ejercicios.Ejercicio2;
+package practica1Objetos.Ejercicios.Ejercicio2;
+
+import practica1Objetos.EjercicioModelo.Auto;
+import practica1objetos.Ejercicios.Metodos.Imprimible;
 
 import java.util.Random;
 
-public class Persona {
+public class Persona implements Imprimible {
     private String nombre;
     private int edad;
     private char letraDNI;
@@ -10,6 +13,9 @@ public class Persona {
     private String dniCompleto;
     private double peso;
     private double altura;
+
+    //Declaración de la variable de referencia del tipo Auto
+    private Auto auto;
 
     public Persona() {
     }
@@ -40,6 +46,14 @@ public class Persona {
         this.dniCompleto = generaDniCompleto();
         this.peso = peso;
         this.altura = altura;
+    }
+
+    public Auto getAuto() {
+        return auto;
+    }
+
+    public void setAuto(Auto auto) {
+        this.auto = auto;
     }
 
     public String getNombre() {
@@ -116,10 +130,18 @@ public class Persona {
         return this.dniCompleto;
     }
 
+
+    @Override
     public void imprimir() {
         System.out.println("Nombre: " + this.nombre);
         System.out.println("Edad: " + this.edad);
         System.out.println("DNI: " + this.dniCompleto);
+        if (this.auto != null) {
+            System.out.println("Vehículo: ");
+            this.auto.imprimir();
+        }else {
+            System.out.println("Vehículo: No tiene vehículo asignado");
+        }
         System.out.println("Peso: " + this.peso);
         System.out.println("Altura: " + this.altura);
     }

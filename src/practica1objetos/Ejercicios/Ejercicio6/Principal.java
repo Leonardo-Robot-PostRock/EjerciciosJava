@@ -1,4 +1,4 @@
-package practica1objetos.Ejercicios.Ejercicio6;
+package practica1Objetos.Ejercicios.Ejercicio6;
 
 public class Principal {
     public static void main(String[] args) {
