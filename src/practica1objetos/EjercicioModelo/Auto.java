@@ -93,7 +93,7 @@ public class Auto implements Imprimible {
         if (velocidadActual + decrementoVelocidad > 0) {
             velocidadActual -= decrementoVelocidad;
         } else {
-            System.out.println("No sé puede decrementar a una velocidad negativa");
+            System.out.println("No se puede decrementar a una velocidad negativa");
         }
     }
 
