@@ -1,8 +1,10 @@
-package practica1objetos.EjercicioModelo;
+package practica1Objetos.EjercicioModelo;
 
-public class Auto {
+import practica1objetos.Ejercicios.Metodos.Imprimible;
+
+public class Auto implements Imprimible {
     private String marca;
-    private int modelo;
+    private String modelo;
     private double motor;
     private int puertas;
     private int asientos;
@@ -13,7 +15,7 @@ public class Auto {
     public Auto() {
     }
 
-    public Auto(String marca, int modelo, double motor, int puertas, int asientos, int velocidadMaxima, int velocidadActual) {
+    public Auto(String marca, String modelo, double motor, int puertas, int asientos, int velocidadMaxima, int velocidadActual) {
         this.marca = marca;
         this.modelo = modelo;
         this.motor = motor;
@@ -31,11 +33,11 @@ public class Auto {
         this.marca = marca;
     }
 
-    public int getModelo() {
+    public String getModelo() {
         return modelo;
     }
 
-    public void setModelo(int modelo) {
+    public void setModelo(String modelo) {
         this.modelo = modelo;
     }
 
@@ -105,13 +107,15 @@ public class Auto {
         return tiempo;
     }
 
+
+    @Override
     public void imprimir() {
         System.out.println("Marca: " + this.marca);
         System.out.println("Modelo: " + this.modelo);
         System.out.println("Motor: " + this.motor);
         System.out.println("Puertas: " + this.puertas);
         System.out.println("Asientos: " + this.asientos);
-        System.out.println("Velocidad máxima:" + this.velocidadMaxima);
-        System.out.println("Velocidad actual" + this.velocidadActual);
+        System.out.println("Velocidad máxima: " + this.velocidadMaxima);
+        System.out.println("Velocidad actual: " + this.velocidadActual);
     }
 }
