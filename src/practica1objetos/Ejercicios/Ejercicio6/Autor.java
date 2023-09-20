@@ -1,4 +1,4 @@
-package practica1Objetos.Ejercicios.Ejercicio6;
+package practica1objetos.Ejercicios.Ejercicio6;
 
 public class Autor {
     private String nombre;

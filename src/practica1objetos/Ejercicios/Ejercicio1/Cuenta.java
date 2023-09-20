@@ -1,4 +1,4 @@
-package practica1Objetos.Ejercicios.Ejercicio1;
+package practica1objetos.Ejercicios.Ejercicio1;
 
 public class Cuenta {
     private String titular;

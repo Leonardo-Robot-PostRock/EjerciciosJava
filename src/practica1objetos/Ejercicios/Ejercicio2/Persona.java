@@ -1,4 +1,4 @@
-package practica1Objetos.Ejercicios.Ejercicio2;
+package practica1objetos.Ejercicios.Ejercicio2;
 
 import practica1Objetos.EjercicioModelo.Auto;
 import practica1objetos.Ejercicios.Metodos.Imprimible;
