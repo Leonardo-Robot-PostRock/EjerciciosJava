@@ -1,6 +1,7 @@
 package practica1objetos.Ejercicios.Ejercicio2;
 
 import practica1Objetos.EjercicioModelo.Auto;
+import practica1objetos.Ejercicios.Ejercicio1.Cuenta;
 import practica1objetos.Ejercicios.Metodos.Imprimible;
 
 import java.util.Random;
@@ -16,6 +17,8 @@ public class Persona implements Imprimible {
 
     //Declaración de la variable de referencia del tipo Auto
     private Auto auto;
+    //Declaración de la variable de referencia del tipo Cuenta
+    private Cuenta cuenta;
 
     public Persona() {
     }
@@ -46,6 +49,15 @@ public class Persona implements Imprimible {
         this.dniCompleto = generaDniCompleto();
         this.peso = peso;
         this.altura = altura;
+    }
+
+    public Persona(String nombre, int edad, String titular, int cantidad) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.dni = generaDNI();
+        this.letraDNI = generaLetraDNI();
+        this.dniCompleto = generaDniCompleto();
+        this.cuenta = new Cuenta(titular, cantidad);
     }
 
     public Auto getAuto() {
@@ -96,6 +108,14 @@ public class Persona implements Imprimible {
         this.altura = altura;
     }
 
+    public Cuenta getCuenta() {
+        return cuenta;
+    }
+
+    public void setCuenta(Cuenta cuenta) {
+        this.cuenta = cuenta;
+    }
+
     public int calcularIMC(double peso, double altura) {
         double indiceMasaCorporal = (peso / (Math.pow(altura, 2)));
         if (indiceMasaCorporal < 20) {
@@ -139,7 +159,7 @@ public class Persona implements Imprimible {
         if (this.auto != null) {
             System.out.println("Vehículo: ");
             this.auto.imprimir();
-        }else {
+        } else {
             System.out.println("Vehículo: No tiene vehículo asignado");
         }
         System.out.println("Peso: " + this.peso);

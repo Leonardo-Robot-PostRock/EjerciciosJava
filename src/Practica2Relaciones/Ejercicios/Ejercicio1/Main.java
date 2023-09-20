@@ -1,6 +1,6 @@
 package Practica2Relaciones.Ejercicios.Ejercicio1;
 
-import practica1Objetos.Ejercicios.Ejercicio2.Persona;
+import practica1objetos.Ejercicios.Ejercicio2.Persona;
 import practica1Objetos.EjercicioModelo.Auto;
 
 public class Main {
