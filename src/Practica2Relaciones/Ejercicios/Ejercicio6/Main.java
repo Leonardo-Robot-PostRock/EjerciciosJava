@@ -11,11 +11,9 @@ public class Main {
         persona1.setCuenta(cuenta1);
         cuenta1.setPersona(persona1);
 
-        System.out.println("Cantidad de dinero: " + persona1.getCuenta().getCantidad());
-
+        System.out.println("Cuenta pertenece a " + cuenta1.getPersona().getNombre());
         System.out.println("-------------------------------------------");
-        System.out.println("Cuenta pertenece a " + cuenta1.getPersona().getNombre()
-        );
+        System.out.println("Cantidad de dinero: " + persona1.getCuenta().getCantidad());
 
     }
 }
