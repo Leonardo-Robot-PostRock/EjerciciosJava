@@ -10,6 +10,12 @@ public class Libro {
         this.autor = autor;
     }
 
+    public Libro(String titulo, String autor, double precio) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.precio = precio;
+    }
+
     public String getTitulo() {
         return titulo;
     }
