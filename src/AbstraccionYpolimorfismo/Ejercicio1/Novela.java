@@ -4,6 +4,7 @@ public class Novela {
     private String genero;
 
     public Novela(String genero) {
+        this.genero = genero;
     }
 
     public String getGenero() {
