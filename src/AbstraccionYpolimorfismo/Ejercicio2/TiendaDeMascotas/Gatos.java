@@ -28,6 +28,6 @@ public class Gatos extends Mascotas{
 
     @Override
     public void sonido() {
-        System.out.println("Los gatos maúllan");
+        System.out.println("Los gatos maúllan y ronronean");
     }
 }
