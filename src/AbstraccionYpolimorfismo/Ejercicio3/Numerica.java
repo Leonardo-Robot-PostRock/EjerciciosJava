@@ -1,4 +1,5 @@
 package AbstraccionYpolimorfismo.Ejercicio3;
 
-public class Vehiculo {
+public abstract class Numerica {
+    
 }
