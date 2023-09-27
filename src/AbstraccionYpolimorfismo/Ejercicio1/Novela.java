@@ -1,9 +1,14 @@
 package AbstraccionYpolimorfismo.Ejercicio1;
 
-public class Novela {
+public class Novela extends Libro {
     private String genero;
 
     public Novela(String genero) {
+        this.genero = genero;
+    }
+
+    public Novela(String titulo, String autor, double precio, String genero) {
+        super(titulo, autor, precio);
         this.genero = genero;
     }
 
@@ -15,7 +20,8 @@ public class Novela {
         this.genero = genero;
     }
 
-    public void imprimir(){
+    @Override
+    public void imprimir() {
         System.out.println("Genero de novela: " + this.genero);
     }
 }
