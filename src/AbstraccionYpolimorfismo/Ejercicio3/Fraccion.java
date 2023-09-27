@@ -32,41 +32,91 @@ public class Fraccion extends Numerica {
     public Numerica sumar(Numerica numero) {
         if (numero instanceof Fraccion) {
             Fraccion otraFraccion = (Fraccion) numero;
-            int denominadorParametro = otraFraccion.denominador;
-            int numeradorParametro = otraFraccion.denominador;
 
-            int nuevoNumerador = 0;
-            int nuevoDenominador = 0;
-
-            if(this.denominador == denominadorParametro){
-                nuevoNumerador = this.numerador + numeradorParametro;
+            if (this.denominador == otraFraccion.denominador) {
+                int nuevoNumerador = calcularNumeradorConDenominadoresIguales(otraFraccion);
                 return new Fraccion(nuevoNumerador, this.denominador);
-            }else {
-                nuevoNumerador =  calcularNuevoNumerador(otraFraccion);
-                nuevoDenominador = this.denominador * denominadorParametro;
-            return new Fraccion(nuevoNumerador, nuevoDenominador);
+            } else {
+                int nuevoNumerador = calcularNuevoNumerador(otraFraccion);
+                int nuevoDenominador = calcularDenominador(otraFraccion);
+                return new Fraccion(nuevoNumerador, nuevoDenominador);
             }
 
         }
         return null;
     }
 
+
+
     private int calcularNuevoNumerador(Fraccion otraFraccion) {
         return (this.numerador * otraFraccion.denominador) + (this.denominador * otraFraccion.numerador);
     }
 
+    private int calcularNumeradorConDenominadoresIguales(Fraccion otraFraccion){
+        return this.numerador + otraFraccion.numerador;
+    }
+
+    private int calcularDenominador(Fraccion otraFraccion){
+        return this.denominador * otraFraccion.denominador;
+    }
+
     @Override
     public Numerica restar(Numerica numero) {
+        if (numero instanceof Fraccion) {
+            Fraccion otraFraccion = (Fraccion) numero;
+
+            if (this.denominador == otraFraccion.denominador) {
+                // Los denominadores son iguales, resta directa de numeradores
+                int nuevoNumerador = calcularNumeradorRestaConDenominadoresIgualesResta(otraFraccion);
+                return new Fraccion(nuevoNumerador, this.denominador);
+            } else {
+                // Los denominadores son diferentes, calcula el denominador común
+                int nuevoNumerador = calcularNuevoNumeradorResta(otraFraccion);
+                int nuevoDenominador = calcularNuevoDenominador(otraFraccion);
+                return new Fraccion(nuevoNumerador, nuevoDenominador);
+            }
+        }
         return null;
+    }
+
+    private int calcularNumeradorRestaConDenominadoresIgualesResta(Fraccion otraFraccion){
+        return this.numerador - otraFraccion.numerador;
+    }
+
+    private int calcularNuevoDenominador(Fraccion otraFraccion){
+        return this.denominador * otraFraccion.denominador;
+    }
+
+    private int calcularNuevoNumeradorResta(Fraccion otraFraccion) {
+        return (this.numerador * otraFraccion.denominador) - (this.denominador * otraFraccion.numerador);
     }
 
     @Override
     public Numerica multiplicar(Numerica numero) {
+        if (numero instanceof Fraccion) {
+            Fraccion otraFraccion = (Fraccion) numero;
+            int nuevoNumerador = this.numerador * otraFraccion.numerador;
+            int nuevoDenominador = this.denominador * otraFraccion.denominador;
+            return new Fraccion(nuevoNumerador, nuevoDenominador);
+        }
         return null;
     }
 
     @Override
     public Numerica dividir(Numerica numero) {
+        if (numero instanceof Fraccion) {
+            Fraccion otraFraccion = (Fraccion) numero;
+
+            int nuevoNumerador = this.numerador * otraFraccion.denominador;
+            int nuevoDenominador = this.denominador * otraFraccion.numerador;
+
+            // Manejar el caso en el que el denominador resultante sea cero
+            if (nuevoDenominador == 0) {
+                throw new ArithmeticException("No se puede dividir por cero.");
+            }
+
+            return new Fraccion(nuevoNumerador, nuevoDenominador);
+        }
         return null;
     }
 }
