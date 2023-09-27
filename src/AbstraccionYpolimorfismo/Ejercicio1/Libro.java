@@ -1,9 +1,12 @@
 package AbstraccionYpolimorfismo.Ejercicio1;
 
-public class Libro {
+public abstract class Libro {
     private String titulo;
     private String autor;
     private double precio;
+
+    public Libro() {
+    }
 
     public Libro(String titulo, String autor) {
         this.titulo = titulo;
@@ -40,9 +43,5 @@ public class Libro {
         this.precio = precio;
     }
 
-    public void imprimir(){
-        System.out.println("El título es: " + this.titulo);
-        System.out.println("El autor es: " + this.autor);
-        System.out.println("El precio del libro es: " + this.precio);
-    }
+    public abstract void imprimir();
 }
