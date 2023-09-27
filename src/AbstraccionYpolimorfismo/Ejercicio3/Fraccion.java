@@ -47,16 +47,15 @@ public class Fraccion extends Numerica {
     }
 
 
-
     private int calcularNuevoNumerador(Fraccion otraFraccion) {
         return (this.numerador * otraFraccion.denominador) + (this.denominador * otraFraccion.numerador);
     }
 
-    private int calcularNumeradorConDenominadoresIguales(Fraccion otraFraccion){
+    private int calcularNumeradorConDenominadoresIguales(Fraccion otraFraccion) {
         return this.numerador + otraFraccion.numerador;
     }
 
-    private int calcularDenominador(Fraccion otraFraccion){
+    private int calcularDenominador(Fraccion otraFraccion) {
         return this.denominador * otraFraccion.denominador;
     }
 
@@ -79,11 +78,11 @@ public class Fraccion extends Numerica {
         return null;
     }
 
-    private int calcularNumeradorRestaConDenominadoresIgualesResta(Fraccion otraFraccion){
+    private int calcularNumeradorRestaConDenominadoresIgualesResta(Fraccion otraFraccion) {
         return this.numerador - otraFraccion.numerador;
     }
 
-    private int calcularNuevoDenominador(Fraccion otraFraccion){
+    private int calcularNuevoDenominador(Fraccion otraFraccion) {
         return this.denominador * otraFraccion.denominador;
     }
 
@@ -95,11 +94,19 @@ public class Fraccion extends Numerica {
     public Numerica multiplicar(Numerica numero) {
         if (numero instanceof Fraccion) {
             Fraccion otraFraccion = (Fraccion) numero;
-            int nuevoNumerador = this.numerador * otraFraccion.numerador;
-            int nuevoDenominador = this.denominador * otraFraccion.denominador;
+            int nuevoNumerador = calcularNuevoNumeradorMultiplicar(otraFraccion);
+            int nuevoDenominador = calcularNuevoDenominadorMultiplicar(otraFraccion);
             return new Fraccion(nuevoNumerador, nuevoDenominador);
         }
         return null;
+    }
+
+    private int calcularNuevoNumeradorMultiplicar(Fraccion otraFraccion) {
+        return this.numerador * otraFraccion.denominador;
+    }
+
+    private int calcularNuevoDenominadorMultiplicar(Fraccion otraFraccion) {
+        return this.denominador * otraFraccion.denominador;
     }
 
     @Override
@@ -107,8 +114,8 @@ public class Fraccion extends Numerica {
         if (numero instanceof Fraccion) {
             Fraccion otraFraccion = (Fraccion) numero;
 
-            int nuevoNumerador = this.numerador * otraFraccion.denominador;
-            int nuevoDenominador = this.denominador * otraFraccion.numerador;
+            int nuevoNumerador = calcularNumeradorDivision(otraFraccion);
+            int nuevoDenominador = calcularDenominadorDivision(otraFraccion);
 
             // Manejar el caso en el que el denominador resultante sea cero
             if (nuevoDenominador == 0) {
@@ -118,5 +125,12 @@ public class Fraccion extends Numerica {
             return new Fraccion(nuevoNumerador, nuevoDenominador);
         }
         return null;
+    }
+
+    private int calcularNumeradorDivision(Fraccion otraFraccion){
+        return this.numerador * otraFraccion.denominador;
+    }
+    private int calcularDenominadorDivision(Fraccion otraFraccion){
+        return this.denominador * otraFraccion.numerador;
     }
 }
