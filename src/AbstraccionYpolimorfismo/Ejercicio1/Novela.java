@@ -22,6 +22,9 @@ public class Novela extends Libro {
 
     @Override
     public void imprimir() {
+        System.out.println("El título es: " + this.getTitulo());
+        System.out.println("El autor es: " + this.getAutor());
         System.out.println("Genero de novela: " + this.genero);
+        System.out.println("El precio del libro es: " + this.getPrecio());
     }
 }
