@@ -3,13 +3,11 @@ package AbstraccionYpolimorfismo.Ejercicio1;
 public class LibrosDeTexto extends Libro {
     private String facultad;
     private String curso;
-    private Novela novela;
 
-    public LibrosDeTexto(String titulo, String autor, double precio, String facultad, String curso, String genero) {
+    public LibrosDeTexto(String titulo, String autor, double precio, String facultad, String curso) {
         super(titulo, autor, precio);
         this.facultad = facultad;
         this.curso = curso;
-        this.novela = new Novela(genero);
     }
 
     @Override
@@ -19,6 +17,5 @@ public class LibrosDeTexto extends Libro {
         System.out.println("El precio del libro es: " + this.getPrecio());
         System.out.println("Impreso en: " + this.facultad);
         System.out.println("Curso al que pertenece: " + this.curso);
-        System.out.println("Género literario: " + this.novela.getGenero());
     }
 }
