@@ -90,7 +90,7 @@ public class Auto implements Imprimible {
     }
 
     public void desacelerar(int decrementoVelocidad) {
-        if (velocidadActual + decrementoVelocidad > 0) {
+        if (velocidadActual - decrementoVelocidad > 0) {
             velocidadActual -= decrementoVelocidad;
         } else {
             System.out.println("No se puede decrementar a una velocidad negativa");
