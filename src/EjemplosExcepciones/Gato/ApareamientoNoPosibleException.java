@@ -1,4 +1,4 @@
-package Gato;
+package EjemplosExcepciones.Gato;
 
 public class ApareamientoNoPosibleException extends Exception {
     public ApareamientoNoPosibleException(String string) {

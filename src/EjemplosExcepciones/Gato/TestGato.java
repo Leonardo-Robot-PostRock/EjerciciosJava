@@ -1,4 +1,4 @@
-package Gato;
+package EjemplosExcepciones.Gato;
 
 public class TestGato {
     /**
