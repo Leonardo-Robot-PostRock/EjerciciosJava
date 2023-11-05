@@ -19,6 +19,7 @@ public class EjemploExcepciones04 {
             lineas = Integer.parseInt(s.nextLine());
         } catch (NumberFormatException ime) {
             System.out.println("Error: Por favor, ingresa números enteros válidos");
+            return;
         }
 
         int longitud = 0;
