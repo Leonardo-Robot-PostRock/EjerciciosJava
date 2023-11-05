@@ -31,17 +31,15 @@ public class EjemploExcepciones09ManzanasConThrowYThrows {
 
     public static int obtenerEnteroPositivo(Scanner scanner) {
         int valor = 0;
-        while (true) {
-            try {
-                valor = Integer.parseInt(scanner.nextLine());
-                if (valor >= 0) {
-                    return valor;
-                } else {
-                    throw new EntradaInvalidaException("El número debe ser positivo.");
-                }
-            } catch (NumberFormatException nfe) {
-                throw new EntradaInvalidaException("La entrada no es un número válido.");
+        try {
+            valor = Integer.parseInt(scanner.nextLine());
+            if (valor >= 0) {
+                return valor;
+            } else {
+                throw new EntradaInvalidaException("El número debe ser positivo.");
             }
+        } catch (NumberFormatException nfe) {
+            throw new EntradaInvalidaException("La entrada no es un número válido.");
         }
     }
 }
