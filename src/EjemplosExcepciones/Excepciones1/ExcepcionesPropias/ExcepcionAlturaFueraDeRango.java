@@ -1,4 +1,4 @@
-package Excepciones1.ExcepcionesPropias;
+package EjemplosExcepciones.Excepciones1.ExcepcionesPropias;
 
 public class ExcepcionAlturaFueraDeRango extends Exception {
   public ExcepcionAlturaFueraDeRango() {
