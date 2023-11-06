@@ -1,20 +1,26 @@
 package EjemplosExcepciones.Gato;
 
+import java.util.Locale;
+
 public class Gato {
     // atributos de gato
-       private String color; // no lo necesitamos para probar las excepciones
+    private String color; // no lo necesitamos para probar las excepciones
 
     private String raza; // no lo necesitamos para probar las excepciones
-    private String sexo;
+    private final String sexo;
 
     /**
      * Constructor de la clase Gato
      *
-     * @param s
-     *          sexo
+     * @param s sexo
      */
-    public Gato(String s) {
-        this.sexo = s;
+    public Gato(String s) throws SexoInvalidoException {
+        String sexoMinusculas = s.toLowerCase();
+
+        if (!sexoMinusculas.equals("hembra") && !sexoMinusculas.equals("macho")) {
+            throw new SexoInvalidoException("El sexo debe ser 'hembra' o 'macho'.");
+        }
+        this.sexo = sexoMinusculas;
     }
 
     /**
@@ -32,15 +38,16 @@ public class Gato {
      * @return nuevo objeto de Gato
      * @throws ApareamientoNoPosibleException
      */
-    public Gato apareaCon(Gato pareja) throws ApareamientoNoPosibleException {
-
+    public Gato apareaCon(Gato pareja) throws ApareamientoNoPosibleException, SexoInvalidoException {
         if (this.sexo.equals(pareja.sexo)) {
             throw new ApareamientoNoPosibleException("No es posible ya que son dos gatos del mismo sexo.");
         }
 
         String hijo = (int) (Math.random() * 2) == 0 ? "hembra" : "macho";
+
         return new Gato(hijo);
     }
+
 
     /**
      * método toString, devuelve el estado del objeto Gato
